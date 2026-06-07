@@ -13,10 +13,10 @@
 
 ## Data Pipeline and Source Note
 
-The primary dataset (`crimes.csv`) possesses a footprint of approximately 27MB, exceeding standard web-interface serialization thresholds. To optimize repository storage and accessibility, the file has been compressed into a standard ZIP archive (`crimes.zip`). 
+The primary dataset (`crimes.csv`) possesses a footprint of approximately 27MB, exceeding standard web-interface serialization thresholds. To optimize repository storage and accessibility, the file has been compressed into a standard ZIP archive (`workspace.zip`). 
 
 The analytical environment utilizes a vectorized execution block allowing Pandas to parse and decompress the source format directly in memory during runtime:
 
 ```python
 import pandas as pd
-crimes = pd.read_csv('crimes.zip')
+crimes = pd.read_csv('workspace.zip')
